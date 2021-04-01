@@ -34,7 +34,7 @@ app.put('/image',(request, response)=>{image.handelImage(request, response,db)})
 
 app.post('/imageurl',(request, response)=>{image.handelApiCall(request, response)});
       
-app.listen(4000,()=>{    console.log('App is running on 4000');})
+app.listen(process.env.PORT || 4000,()=>{    console.log(`App is running on ${process.env.PORT}`);})
 
 
 
